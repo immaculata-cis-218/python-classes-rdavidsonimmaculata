@@ -46,7 +46,7 @@ def test_checks():
 
 def test_credit_card():
     """
-    Test that the credit card has a credit card
+    Test that the account has a credit card
     """
     test_member5 = Credit("5555555", "Testian Testoppolus", "$5.00", 5)
     summary5 = test_member5.account_summary()
