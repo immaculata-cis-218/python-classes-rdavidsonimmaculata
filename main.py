@@ -59,5 +59,5 @@ if __name__ == "__main__":
     print(Katy.account_summary())
     Miley = Checking("234567", "Miley Cyrus", "$500,000", 1)
     print(Miley.account_summary())
-    Taylor = Credit("4567890", "Taylor Swift", "$800,000", 2)
+    Taylor = Credit("4567890", "Taylor Swift", "$900,000", 2)
     print(Taylor.account_summary())
