@@ -39,7 +39,7 @@ def test_checks():
     """
     Test that the checking account has checks
     """
-    test_member4 = Checking("4444444", "Test Test Jr.", "$4.00", 8)
+    test_member4 = Checking("4444444", "Test Test", "$4.00", 8)
     summary4 = test_member4.account_summary()
     assert "8" in summary4
 
