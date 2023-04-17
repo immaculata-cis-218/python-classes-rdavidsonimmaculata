@@ -65,6 +65,6 @@ def test_eq_():
     """
     Test eq
     """
-    test_member7 = Account("7777777", "Test Test", "$7.00")
+    test_member7 = Account("7777777", "Test Test", "$8.00")
     test_member8 = test_member7
     assert test_member7 is test_member8
