@@ -6,7 +6,6 @@ Description: This program will display a member's bank account summary including
 balances and subshares
 """
 
-
 class Account:
     """
     Credit Union Account
@@ -18,9 +17,31 @@ class Account:
         self.account_balance = account_balance
 
     def account_summary(self):
-        summery = f"{self.full_name}'s account number is {self.__account_number} and the account balance is {self.account_balance}"
+        """
+        Gives a Summary of the Account
+        """
+        summery = f"Account {self.__account_number} belongs to {self.full_name}, the balance is {self.account_balance}"
         return summery
+    def __repr__(self):
+        return "Account(" + str(self.__account_number) + "," + str(self.full_name) + "," + str(self.account_balance) + ")"
+    def __str__(self):
+        return "Account number "+ str(self.__account_number) + " is owned by "+ str(self.full_name) + " and has an account balance of " + str(self.account_balance)
+    def __eq__(self,other):
+        if self is other:
+            return True
+        if type(self) != type(other):
+            return False
+        else:
+            return self.__account_number == other.__account_number
+    def __lt__(self,other):
+        if type(self.account_balance) != type(other.account_balance):
+            return False
+        return self.account_balance < other.account_balance
 
+    def __gt__(self,other):
+        if type(self.account_balance) != type(other.account_balance):
+            return False
+        return self.account_balance >= other.account_balance
 
 class Checking(Account):
     """
@@ -61,3 +82,7 @@ if __name__ == "__main__":
     print(Miley.account_summary())
     Taylor = Credit("4567890", "Taylor Swift", "$900,000", 2)
     print(Taylor.account_summary())
+    print(repr(Taylor))
+    print(str(Taylor))
+    print(Katy.account_balance<Miley.account_balance)
+    print(Miley.account_balance>Taylor.account_balance)

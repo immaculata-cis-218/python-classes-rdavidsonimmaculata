@@ -15,7 +15,7 @@ def test_account_number():
     test_member = Account("1111111", "Test McTest", "$1.00")
     summary = test_member.account_summary()
     assert "1111111" in summary
-
+    
 
 def test_name():
     """
@@ -51,3 +51,20 @@ def test_credit_card():
     test_member5 = Credit("5555555", "Testian Testoppolus", "$5.00", 5)
     summary5 = test_member5.account_summary()
     assert "5" in summary5
+
+def test_repr_and_str():
+    """
+    Test the repr and str
+    """
+    test_member6 = Account("6666666", "Tina Tester", "$6.00")
+    print(test_member6.__repr__())
+    assert "Tina Tester" in repr(test_member6)
+    assert "6666666" in str(test_member6)
+
+def test_eq_():
+    """
+    Test eq
+    """
+    test_member7 = Account("7777777", "Test Test", "$7.00")
+    test_member8 = test_member7
+    assert test_member7 is test_member8
