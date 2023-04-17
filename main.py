@@ -78,7 +78,7 @@ class Credit(Account):
 if __name__ == "__main__":
     Katy = Account("123456", "Katy Perry", "$100,000")
     print(Katy.account_summary())
-    Miley = Checking("234567", "Miley Cyrus", "$500,000", 1)
+    Miley = Checking("234567", "Miley Cyrus", "$400,000", 1)
     print(Miley.account_summary())
     Taylor = Credit("4567890", "Taylor Swift", "$900,000", 2)
     print(Taylor.account_summary())

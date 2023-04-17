@@ -2,7 +2,7 @@
 Program Name: Test for Classes
 Author: Rebecca Davidson
 Date: 3/20/2023
-Description: This program will display a member's bank account summary including balances and subshares
+Description: This program  will display a member's bank account summary including balances and subshares
 """
 
 from main import Account, Checking, Credit
